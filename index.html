@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sri Lakshmi Paints & Hardware - Digital Card</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #f1f9ff, #fff);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .card {
+      background: #fff;
+      max-width: 450px;
+      margin: 30px auto;
+      padding: 28px 20px;
+      border-radius: 24px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    }
+    .banner {
+      width: 100%;
+      height: auto;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+    .logo {
+      width: 80px;
+      border-radius: 50%;
+      border: 3px solid #ff5003;
+    }
+    .profile-info h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #002347;
+    }
+    .profile-info p {
+      margin: 4px 0 0;
+      font-size: 14px;
+      color: #555;
+    }
+    h3 {
+      color: #002347;
+      margin-top: 20px;
+    }
+    ul.services {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+      text-align: left;
+    }
+    ul.services li {
+      background: #f0f0f0;
+      margin: 6px 0;
+      padding: 10px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+    }
+    .review {
+      font-style: italic;
+      color: #444;
+      background: #e8f5ff;
+      border-left: 5px solid #007bff;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    a.button {
+      padding: 10px 14px;
+      background: #002347;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 14px;
+      min-width: 120px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    a.button:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+    a.whatsapp { background: #25D366; }
+    a.map { background: #ff5003; }
+    a.call { background: #007bff; }
+    a.email { background: #ff9900; }
+    .social-icons {
+      margin-top: 16px;
+    }
+    .social-icons a {
+      margin: 0 12px;
+      text-decoration: none;
+      font-size: 24px;
+      color: #002347;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 10px 0;
+    }
+    .gallery img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+
+    /* Animate card on page load */
+    .card {
+      animation: fadeInUp 0.8s ease forwards;
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    @keyframes fadeInUp {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Hover effect on gallery images */
+    .gallery img {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Optional captions below images */
+    .gallery-caption {
+      font-size: 13px;
+      color: #555;
+      margin-top: 4px;
+      text-align: center;
+    }
+
+    .offer {
+      background: #fff3e6;
+      color: #b35500;
+      padding: 10px;
+      border-left: 5px solid #ffa200;
+      margin: 10px 0;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+    .section {
+      text-align: left;
+      padding: 12px 0;
+    }
+    .highlight-box {
+      background: #dff9fb;
+      padding: 10px;
+      border-radius: 10px;
+      margin: 10px 0;
+      font-weight: bold;
+      color: #00796b;
+    }
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 10px 0;
+    }
+    .category-grid div {
+      background: #e0ecff;
+      padding: 10px;
+      border-radius: 10px;
+      font-weight: 500;
+      color: #002347;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="card">
+    <img src="paint_shop.jpg" alt="Banner" class="banner">
+    <div class="profile">
+      <img src="user.jpg" alt="Logo" class="logo" />
+      <div class="profile-info">
+        <h2>Sri Lakshmi Paints & Hardware</h2>
+        <p>Nazarbad, Mysore</p>
+      </div>
+    </div>
+
+    <div class="highlight-box">🎨 Paints • 🧰 Hardware • 🚪 Door Accessories</div>
+
+    <div class="section">
+      <h3>🛠 Materials Available:</h3>
+      <div class="category-grid">
+        <div>Paints</div>
+        <div>Wall Putty</div>
+        <div>Tools</div>
+        <div>Brushes</div>
+        <div>Hinges</div>
+        <div>Adhesives</div>
+        <div>Plumbing</div>
+        <div>Drill Machines</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>📸 Product Gallery:</h3>
+        <div class="gallery">
+          <div>
+            <img src="asian.jpg" alt="Paint" />
+            <div class="gallery-caption">Asian Paints</div>
+          </div>
+          <div>
+            <img src="royale.jpg" alt="Brush Set" />
+            <div class="gallery-caption">Royale Brushes</div>
+          </div>
+          <div>
+            <img src="apcolite.jpg" alt="Door Accessories" />
+            <div class="gallery-caption">Apcolite Finish</div>
+          </div>
+          <div>
+            <img src="rolls.jpg" alt="Paint Rolls" />
+            <div class="gallery-caption">Paint Rolls</div>
+    </div>
+</div>
+
+    </div>
+
+  <!--   <div class="section">
+      <h3>🏷️ Special Offers:</h3>
+      <div class="offer">🔥 Flat 10% off on all Asian Paints this month!</div>
+      <div class="offer">🎁 Buy 2 Fevicol (1kg), Get 1 Free</div>
+    </div> -->
+
+    <div class="section">
+      <h3>📋 Product List & Prices:</h3>
+      <ul class="services">
+        <li><span>Asian Paints 1L</span> <span>₹225</span></li>
+        <li><span>Brush Set</span> <span>₹60</span></li>
+        <li><span>Wall Putty 5kg</span> <span>₹180</span></li>
+        <li><span>Door Hinge (Set)</span> <span>₹90</span></li>
+        <li><span>Fevicol 1kg</span> <span>₹120</span></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>🕒 Business Hours:</h3>
+      <p>Mon–Sat: 9:00 AM – 8:00 PM</p>
+      <p>Sunday: Closed</p>
+    </div>
+
+    <div class="button-group">
+      <a class="button whatsapp" href="https://wa.me/918073112465?text=Hi%20I%20am%20interested%20in%20your%20products" target="_blank">💬 WhatsApp</a>
+      <a class="button call" href="tel:+918073112465">📞 Call</a>
+      <a class="button email" href="mailto:customer@example.com">📧 Email</a>
+      <a class="button map" href="https://goo.gl/maps/k3n3vXYy8G72" target="_blank">📍 Map</a>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://instagram.com/srilakshmipaints" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com/srilakshmipaints" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
+
+    <div style="padding: 10px 20px;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31101.425027745445!2d76.620061!3d12.295810!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf700f2e3e20cd%3A0xf7f82cbb34a80a7d!2sKuvempunagar%2C%20Mysuru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1719919057722!5m2!1sen!2sin"
+          width="100%" height="200" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+  </div>
+
+</body>
+</html>
